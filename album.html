@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JVLIVS - SCH</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --main-bg: #0F0F0F; /* Noir profond */
+      --gold: #D4AF37; /* Doré chaud */
+      --rich-brown: #5A4334; /* Brun riche */
+      --deep-green: #3C5A40; /* Vert profond */
+      --soft-beige: #E8D9C5; /* Beige doux */
+    }
+  </style>
+</head>
+<body class="bg-[var(--main-bg)] text-[var(--soft-beige)] font-sans">
+
+  <!-- Section 1 : Couverture de l'album -->
+  <header class="relative h-screen bg-cover bg-center" style="background-image: url('./images/coverjvlivs.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-end p-8">
+      <h1 class="text-5xl md:text-7xl font-extrabold text-[var(--soft-beige)]">JVLIVS</h1>
+      <h2 class="text-3xl text-[var(--gold)] mt-2">par SCH</h2>
+    </div>
+  </header>
+
+  <!-- Section 2 : Liste des titres -->
+  <section class="py-12 bg-[var(--rich-brown)]">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-[var(--gold)] mb-6 text-center">Liste des titres</h2>
+      <ol class="list-decimal list-inside bg-[var(--main-bg)] p-6 rounded-lg shadow-lg">
+        <li class="mb-2" onclick="showLyrics('Intro - Le déluge')">Intro - Le déluge</li>
+        <li class="mb-2" onclick="showLyrics('VNTM')">VNTM</li>
+        <li class="mb-2" onclick="showLyrics('Pharmacie')">Pharmacie</li>
+        <li class="mb-2" onclick="showLyrics('Tokarev')">Tokarev</li>
+        <li class="mb-2" onclick="showLyrics('Interlude - 420 mètres')">Interlude - 420 mètres</li>
+        <li class="mb-2" onclick="showLyrics('Otto')">Otto</li>
+        <li class="mb-2" onclick="showLyrics('Skydweller')">Skydweller</li>
+        <li class="mb-2" onclick="showLyrics('Facile')">Facile</li>
+        <li class="mb-2" onclick="showLyrics('Pret à partir')">Pret à partir</li>
+        <li class="mb-2" onclick="showLyrics('Mort de rire')">Mort de rire</li>
+        <li class="mb-2" onclick="showLyrics('Ivresse & Hennessy')">Ivresse & Hennessy</li>
+        <li class="mb-2" onclick="showLyrics('Jt\'en prie')">Jt'en prie</li>
+        <li class="mb-2" onclick="showLyrics('Interlude - Beretta 92FS')">Interlude - Beretta 92FS</li>
+        <li class="mb-2" onclick="showLyrics('Le code')">Le code</li>
+        <li class="mb-2" onclick="showLyrics('Incompris')">Incompris</li>
+        <li class="mb-2" onclick="showLyrics('Ciel rouge')">Ciel rouge</li>
+        <li class="mb-2" onclick="showLyrics('Bénéfice')">Bénéfice</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="py-12 bg-[var(--main-bg)]">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-[var(--gold)] mb-6 text-center">Paroles des chansons</h2>
+      <div class="flex gap-4 h-[400px]">
+        <!-- Liste des titres avec défilement -->
+        <div class="bg-[var(--rich-brown)] rounded-lg p-4 shadow-lg overflow-y-auto w-1/3 h-full">
+          <ul class="space-y-2">
+            <li><button onclick="showLyrics('Intro - Le déluge')" class="text-[var(--soft-beige)] hover:text-[var(--gold)] w-full text-left">Intro - Le déluge</button></li>
+            <li><button onclick="showLyrics('VNTM')" class="text-[var(--soft-beige)] hover:text-[var(--gold)] w-full text-left">VNTM</button></li>
+            <li><button onclick="showLyrics('Pharmacie')" class="text-[var(--soft-beige)] hover:text-[var(--gold)] w-full text-left">Pharmacie</button></li>
+            <li><button onclick="showLyrics('Tokarev')" class="text-[var(--soft-beige)] hover:text-[var(--gold)] w-full text-left">Tokarev</button></li>
+            <li><button onclick="showLyrics('Interlude - 420 mètres')" class="text-[var(--soft-beige)] hover:text-[var(--gold)] w-full text-left">Interlude - 420 mètres</button></li>
+            <li><button onclick="showLyrics('Otto')" class="text-[var(--soft-beige)] hover:text-[var(--gold)] w-full text-left">Otto</button></li>
+            <li><button onclick="showLyrics('Skydweller')" class="text-[var(--soft-beige)] hover:text-[var(--gold)] w-full text-left">Skydweller</button></li>
+            <li><button onclick="showLyrics('Facile')" class="text-[var(--soft-beige)] hover:text-[var(--gold)] w-full text-left">Facile</button></li>
+            <li><button onclick="showLyrics('Pret à partir')" class="text-[var(--soft-beige)] hover:text-[var(--gold)] w-full text-left">Pret à partir</button></li>
+            <li><button onclick="showLyrics('Mort de rire')" class="text-[var(--soft-beige)] hover:text-[var(--gold)] w-full text-left">Mort de rire</button></li>
+            <li><button onclick="showLyrics('Ivresse & Hennessy')" class="text-[var(--soft-beige)] hover:text-[var(--gold)] w-full text-left">Ivresse & Hennessy</button></li>
+            <li><button onclick="showLyrics('Jt\'en prie')" class="text-[var(--soft-beige)] hover:text-[var(--gold)] w-full text-left">Jt'en prie</button></li>
+            <li><button onclick="showLyrics('Interlude - Beretta 92FS')" class="text-[var(--soft-beige)] hover:text-[var(--gold)] w-full text-left">Interlude - Beretta 92FS</button></li>
+            <li><button onclick="showLyrics('Le code')" class="text-[var(--soft-beige)] hover:text-[var(--gold)] w-full text-left">Le code</button></li>
+            <li><button onclick="showLyrics('Incompris')" class="text-[var(--soft-beige)] hover:text-[var(--gold)] w-full text-left">Incompris</button></li>
+            <li><button onclick="showLyrics('Ciel rouge')" class="text-[var(--soft-beige)] hover:text-[var(--gold)] w-full text-left">Ciel rouge</button></li>
+            <li><button onclick="showLyrics('Bénéfice')" class="text-[var(--soft-beige)] hover:text-[var(--gold)] w-full text-left">Bénéfice</button></li>
+          </ul>
+        </div>
+        <!-- Affichage des paroles -->
+        <div class="bg-[var(--deep-green)] rounded-lg p-4 shadow-lg w-2/3 h-full overflow-y-auto">
+          <div id="lyrics" class="text-[var(--soft-beige)] whitespace-pre-line">
+            <p>Les paroles de la chanson sélectionnée apparaîtront ici.</p>
+          </div>
+        </div>        
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <!-- Footer -->
+  <footer class="py-4 bg-[var(--rich-brown)] text-center">
+    <p class="text-[var(--soft-beige)]">© 2024 JVLIVS Fan Page - Créé par Mathys</p>
+  </footer>
+
+  <!-- Script -->
+  <script src="./paroles.js"></script>
+  <script>
+    function showLyrics(song) {
+      const lyrics = getParoles(song);
+      document.getElementById('lyrics').innerHTML = `<p>${lyrics}</p>`;
+    }
+  </script>
+
+</body>
+</html>
